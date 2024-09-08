@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
-  canvas.addEventListener("mousedown", (e) => {
+  canvas.addEventListener("pointerdown", (e) => {
     if (!pencil) {
       joined = [];
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  canvas.addEventListener("mousemove", (e) => {
+  canvas.addEventListener("pointermove", (e) => {
     if (pencil) {
       let pos = getMousePos(e);
       //console.log("Checking");
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  window.addEventListener("mouseup", (e) => {
+  window.addEventListener("pointerup", (e) => {
     if (pencil) {
       //console.log("Pencil Closed");
       let pos = getMousePos(e);
